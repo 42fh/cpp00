@@ -1,4 +1,5 @@
-run = "cowsay Configure me!"
+compile = "make -s"
+run = "./main"
 
 [nix]
 channel = "stable-22_11"
