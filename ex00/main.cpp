@@ -5,5 +5,4 @@ int main(int argc, char* argv[]) {
 	else {std::string input; input = argv[1];
 		for (std::string::iterator i = input.begin(); i < input.end(); i++)
 			{*i = ::toupper(*i);}
-		std::cout << input << std::endl;}
-	return 0;}
+		std::cout << input << std::endl;}}
