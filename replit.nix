@@ -1,5 +1,5 @@
 { pkgs }: {
     deps = [
-        pkgs.gcc
+        pkgs.clang_12
     ];
 }
