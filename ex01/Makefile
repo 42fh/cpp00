@@ -1,7 +1,7 @@
 #CPPC is short for CPP Compiler
 CPPC=clang++
 NAME=MyAwesomePhoneBook
-SRCS=main.cpp Contact.cpp
+SRCS=main.cpp Contact.cpp PhoneBook.cpp
 
 all: $(NAME)
 
