@@ -4,8 +4,12 @@
 #include <string>
 
 class Contact {
-	private: std::string firstname, lastname, phonenumber, darkestsecret;
-	public: Contact(); void foo();
+	public: std::string firstname, lastname, nickname, phonenumber, secret;
+	public: Contact(); Contact(std::string, std::string, std::string, std::string, std::string);
+		void print();
+		// Contact& Contact::operator= (const Contact& fraction);
+	
 };
 
 #endif
+
