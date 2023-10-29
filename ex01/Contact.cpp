@@ -20,7 +20,7 @@ Contact::Contact(std::string a, std::string b, std::string c, std::string d, std
 // print all members of contact class
 void Contact::print()
 {
-	std::cout << "firstname: " << this->firstname << "lastname: " << this->lastname << std::endl;
+	std::cout << "firstname: " << this->firstname << " lastname: " << this->lastname << std::endl;
 }
 
 // // Contact assignment operator overload implementation

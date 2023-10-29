@@ -1,10 +1,11 @@
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
-#define PBSIZE 8
+#define PBSIZE 3
 
 #include <string.h>
 #include <iostream>
+#include <iomanip>
 #include "Contact.hpp"
 
 class PhoneBook {
@@ -12,6 +13,7 @@ class PhoneBook {
 	public: 
 		void add(std::string, std::string, std::string, std::string, std::string);
 		void print();
+		void removeoldest();
 		PhoneBook();
 };
 

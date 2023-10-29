@@ -34,6 +34,6 @@ int main() {
 		else if (str == "SEARCH")
 			b.print();
 		else
-			std::cout << "invalid commant" << std::endl;
+			std::cout << "invalid command" << std::endl;
 	}
 }
