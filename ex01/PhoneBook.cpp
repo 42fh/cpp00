@@ -25,15 +25,15 @@ void print_truncated(std::string str, unsigned long n)
 	(str.length() < n + 1) ? std::cout << str : std::cout << str.substr(0, n - 1) + ".";
 }
 
+int PhoneBook::getsize(){ return size; }
+
 // print the phonebook
 void PhoneBook::print()
 {
-	if (size == 0)
-		std::cout << "the phonebook is empty, nothing to show" << std::endl;
 	for (int i = 0; i < size; i++)
 	{
 		std::cout << "|" << std::setw(10);
-		std::cout << i << std::setw(0) << "|";
+		std::cout << i + 1 << std::setw(0) << "|";
 		
 		std::cout << std::setw(10);
 

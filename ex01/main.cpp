@@ -6,7 +6,6 @@ void	add(PhoneBook& book)
 {
 	std::string firstname, lastname, nickname, phonenumber, secret;
 	std::cout << "Please enter: firstname, lastname, nickname, phonenumber and secret" << std::endl;
-	std::cin.sync();
 	std::getline(std::cin, firstname);
 	std::getline(std::cin, lastname);
 	std::getline(std::cin, nickname);
@@ -28,8 +27,15 @@ void	add(PhoneBook& book)
 
 void search(PhoneBook& book)
 {
+	if (book.getsize() == 0)
+	{
+		std::cout << "the phonebook is empty, nothing to show" << std::endl;
+		return ;
+	}
 	book.print();
-	std::cout << std::endl << "please enter an index to show" << std::endl;
+	std::cout << std::endl << "enter an index from 1 to " << book.getsize() 
+		<< " to see the full entry" << std::endl;
+	
 }
 
 int main() {
@@ -37,7 +43,7 @@ int main() {
 	PhoneBook b; std::string str;
 
 	for (;;){
-		std::cin >> str;
+		std::getline(std::cin, str);
 		if (str == "EXIT")
 			break;
 		else if (str == "ADD")

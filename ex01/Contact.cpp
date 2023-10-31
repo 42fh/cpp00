@@ -3,7 +3,6 @@
 
 Contact::Contact()
 {
-	std::cout << "default Contact constr" << std::endl;
 	this->firstname = "fish";
 }
 

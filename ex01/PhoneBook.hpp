@@ -14,6 +14,7 @@ class PhoneBook {
 		void add(std::string, std::string, std::string, std::string, std::string);
 		void print();
 		void removeoldest();
+		int getsize();
 		PhoneBook();
 };
 
