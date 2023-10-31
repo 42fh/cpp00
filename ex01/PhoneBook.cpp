@@ -20,16 +20,33 @@ void PhoneBook::add(std::string a, std::string b, std::string c, std::string d, 
 	}
 }
 
+void print_truncated(std::string str, unsigned long n)
+{
+	(str.length() < n + 1) ? std::cout << str : std::cout << str.substr(0, n - 1) + ".";
+}
+
 // print the phonebook
 void PhoneBook::print()
 {
+	if (size == 0)
+		std::cout << "the phonebook is empty, nothing to show" << std::endl;
 	for (int i = 0; i < size; i++)
 	{
-		cout.width (10);
-		cout << x;
-		cout.width (10);
-		cout << y << endl;
-		contacts[i].print();
+		std::cout << "|" << std::setw(10);
+		std::cout << i << std::setw(0) << "|";
+		
+		std::cout << std::setw(10);
+
+		print_truncated(contacts[i].getfirstname(), 10);
+		std::cout << std::setw(0) << "|";
+
+		std::cout << std::setw(10);
+		print_truncated(contacts[i].getlastname(), 10);
+		std::cout << std::setw(0) << "|";
+
+		std::cout << std::setw(10);
+		print_truncated(contacts[i].getnickname(), 10);
+		std::cout << std::setw(0) << "|" << std::endl;
 	}
 }
 
