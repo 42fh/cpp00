@@ -8,7 +8,6 @@ Contact::Contact()
 
 Contact::Contact(std::string a, std::string b, std::string c, std::string d, std::string e)
 {
-	std::cout << "full Contact constr" << std::endl;
 	this->firstname = a;
 	lastname = b;
 	this->nickname = c;
@@ -31,11 +30,11 @@ std::string Contact::getsecret() const {return secret;}
 
 std::ostream& operator<<(std::ostream& os, const Contact& p)
 {
-    return os << "firstname: " << p.getfirstname();
-    return os << "lastname: " << p.getlastname();
-    return os << "nickname: " << p.getnickname();
-    return os << "phonenumber: " << p.getphonenumber();
-    return os << "secret: " << p.getsecret();
+    return os << "firstname: " << p.getfirstname() << std::endl
+    					<< "lastname: " << p.getlastname() << std::endl
+    					<< "nickname: " << p.getnickname() << std::endl
+    					<< "phonenumber: " << p.getphonenumber() << std::endl
+    					<< "secret: " << p.getsecret() << std::endl;
 }
 
 

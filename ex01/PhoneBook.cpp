@@ -26,6 +26,7 @@ void print_truncated(std::string str, unsigned long n)
 }
 
 int PhoneBook::getsize(){ return size; }
+Contact& PhoneBook::getcontact(int i){ return contacts[i]; }
 
 // print the phonebook
 void PhoneBook::print()

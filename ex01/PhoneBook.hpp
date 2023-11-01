@@ -15,6 +15,7 @@ class PhoneBook {
 		void print();
 		void removeoldest();
 		int getsize();
+		Contact& getcontact(int);
 		PhoneBook();
 };
 

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <cstdlib>
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
@@ -14,10 +16,13 @@ void	add(PhoneBook& book)
 	//if one of 5 strings is empty:
 	if (firstname.empty() || lastname.empty() || nickname.empty() || phonenumber.empty() || secret.empty())
 		std::cout << "You entered:" 
-		<< "[" << firstname << "]" << lastname << nickname << phonenumber << secret << std::endl
+		<< firstname << lastname << nickname << phonenumber << secret << std::endl
 		<< "Please enter non empty strings 5 strings" << std::endl;
 	else
+	{
 		book.add(firstname, lastname, nickname, phonenumber, secret);
+		std::cout << "sucess: new contact added" << std::endl;
+	}
 }
 
 // if (firstname != "" && lastname != "" && nickname != "" && phonenumber != "" && secret != "")
@@ -34,8 +39,15 @@ void search(PhoneBook& book)
 	}
 	book.print();
 	std::cout << std::endl << "enter an index from 1 to " << book.getsize() 
-		<< " to see the full entry" << std::endl;
-	
+		<< " to see the corresponding entry" << std::endl;
+	std::string indexstr;
+	std::getline(std::cin, indexstr);
+	int index;
+	index = atoi(indexstr.c_str());
+	if (!(index - 1 >= 0 && index - 1 < book.getsize()))
+		std::cout << "invalid index" << std::endl;
+	else
+		std::cout << book.getcontact(index - 1);
 }
 
 int main() {
